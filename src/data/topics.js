@@ -1,0 +1,20 @@
+export const topics = [
+  "Artificial Intelligence and Machine Learning",
+  "Deep Learning for Electrical Systems",
+  "Smart Grid",
+  "Cyber Security",
+  "Renewable Energy Systems",
+  "Power Systems",
+  "Green Technology",
+  "IoT Applications in Electrical Engineering",
+  "Power Quality",
+  "Power Electronics and Drives",
+  "Electric Transportation Systems",
+  "High Voltage Technologies",
+  "HVDC and FACTS Devices",
+  "Instrumentation and Control",
+  "Process Control and Automation",
+  "Signal and Image Processing Techniques",
+  "Control Engineering",
+  "Optimization Techniques for Electrical Systems"
+];
