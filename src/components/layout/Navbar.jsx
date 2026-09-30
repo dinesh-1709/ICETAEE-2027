@@ -32,14 +32,14 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-4">
             <Link to="/" className={`font-display font-bold text-2xl tracking-wider text-primary-800`}>
-              ETAEE <span className="text-secondary-500">2027</span>
+              ICETAEE <span className="text-secondary-500">2027</span>
             </Link>
           </div>
-          
+
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
+              <Link
+                key={link.name}
                 to={link.path}
                 className={`font-medium transition-colors hover:text-secondary-600 ${location.pathname === link.path ? 'text-secondary-600' : 'text-slate-700'}`}
               >
@@ -48,7 +48,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <button 
+          <button
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -65,8 +65,8 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-4 flex flex-col space-y-4">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
+            <Link
+              key={link.name}
               to={link.path}
               className={`font-medium block py-2 border-b border-slate-100 ${location.pathname === link.path ? 'text-secondary-600' : 'text-slate-700'} hover:text-primary-600`}
               onClick={() => setIsMobileMenuOpen(false)}
