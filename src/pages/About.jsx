@@ -8,7 +8,7 @@ const About = () => {
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
       
       <div className="relative z-10">
-        <h2 className="section-title">About ETAEE 2027</h2>
+        <h2 className="section-title">About ICETAEE 2027</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
