@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import Acknowledgement from './components/layout/Acknowledgement';
 import Home from './pages/Home';
 import About from './pages/About';
 import Topics from './pages/Topics';
@@ -23,6 +24,7 @@ function App() {
             <Route path="/registration" element={<Registration />} />
             <Route path="/committee" element={<Committee />} />
           </Routes>
+          <Acknowledgement />
         </main>
         <Footer />
       </div>

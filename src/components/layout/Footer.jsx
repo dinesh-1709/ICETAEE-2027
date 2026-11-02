@@ -19,9 +19,12 @@ const Footer = () => {
               <strong>19th - 20th February 2027</strong> <br />
               Online Conference
             </p>
-            <p className="text-s text-slate-400 max-w-sm leading-relaxed">
-              The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
-            </p>
+            <div className="mt-4">
+              <h4 className="text-white font-semibold mb-2 uppercase tracking-wider text-sm">Acknowledgement</h4>
+              <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
+                The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+              </p>
+            </div>
           </div>
 
           <div>
