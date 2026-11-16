@@ -1,5 +1,6 @@
 import React from 'react';
-import { CalendarDays, Clock } from 'lucide-react';
+import { CalendarDays, Clock, ExternalLink } from 'lucide-react';
+import { CMT_SUBMISSION_URL } from '../data/links';
 
 const ImportantDates = () => {
   const dates = [
@@ -28,6 +29,21 @@ const ImportantDates = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 bg-white rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm text-center">
+          <h3 className="text-xl font-bold text-slate-900 mb-2">Ready to Submit Your Paper?</h3>
+          <p className="text-slate-600 text-sm max-w-xl mx-auto mb-5">
+            Papers must be submitted online using the Microsoft CMT conference management portal.
+          </p>
+          <a
+            href={CMT_SUBMISSION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-secondary-600 hover:bg-secondary-700 text-white rounded-xl font-semibold shadow-md shadow-secondary-600/20 transition-all transform hover:scale-105 text-sm"
+          >
+            Submit Paper via Microsoft CMT <ExternalLink size={16} />
+          </a>
         </div>
       </div>
     </section>

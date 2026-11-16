@@ -1,6 +1,7 @@
 import React from 'react';
-import { BookOpen, CheckCircle } from 'lucide-react';
+import { BookOpen, CheckCircle, ExternalLink } from 'lucide-react';
 import { topics } from '../data/topics';
+import { CMT_SUBMISSION_URL } from '../data/links';
 
 const Topics = () => {
   return (
@@ -28,7 +29,17 @@ const Topics = () => {
         <ul className="text-left text-slate-700 space-y-3 max-w-2xl mx-auto text-sm">
           <li className="flex items-start gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-2 flex-shrink-0"></span>
-            <span>Papers must be submitted in PDF format through the online submission portal.</span>
+            <span>
+              Papers must be submitted in PDF format through the Microsoft CMT online submission portal:{' '}
+              <a
+                href={CMT_SUBMISSION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-600 hover:text-secondary-700 font-semibold underline inline-flex items-center gap-1"
+              >
+                Submit Paper <ExternalLink size={13} />
+              </a>
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-2 flex-shrink-0"></span>
@@ -43,6 +54,17 @@ const Topics = () => {
             <span className="font-semibold text-primary-900">Accepted papers may be published in Scopus indexed "LNEE Book Series" subject to its approval from Springer.</span>
           </li>
         </ul>
+
+        <div className="mt-8 pt-6 border-t border-primary-200/60 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href={CMT_SUBMISSION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3.5 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-semibold flex items-center justify-center gap-2 transition-all transform hover:scale-105 shadow-md shadow-primary-600/30 text-sm sm:text-base"
+          >
+            Submit Paper via Microsoft CMT <ExternalLink size={18} />
+          </a>
+        </div>
       </div>
     </section>
   );

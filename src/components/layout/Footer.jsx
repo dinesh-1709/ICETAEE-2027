@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, ExternalLink } from 'lucide-react';
+import { CMT_SUBMISSION_URL } from '../../data/links';
 
 const Footer = () => {
   return (
@@ -21,9 +22,17 @@ const Footer = () => {
             </p>
             <div className="mt-4">
               <h4 className="text-white font-semibold mb-2 uppercase tracking-wider text-sm">Acknowledgement</h4>
-              <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
+              <p className="text-xs text-slate-400 max-w-sm leading-relaxed mb-2">
                 The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
               </p>
+              <a
+                href={CMT_SUBMISSION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-secondary-400 hover:text-secondary-300 font-semibold inline-flex items-center gap-1 transition-colors"
+              >
+                Access Microsoft CMT Portal <ExternalLink size={12} />
+              </a>
             </div>
           </div>
 
@@ -32,6 +41,16 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li><Link to="/about" className="hover:text-secondary-400 transition-colors">About</Link></li>
               <li><Link to="/topics" className="hover:text-secondary-400 transition-colors">Call for Papers</Link></li>
+              <li>
+                <a
+                  href={CMT_SUBMISSION_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary-400 hover:text-secondary-300 font-semibold inline-flex items-center gap-1.5 transition-colors"
+                >
+                  Submit Paper (CMT) <ExternalLink size={12} />
+                </a>
+              </li>
               <li><Link to="/registration" className="hover:text-secondary-400 transition-colors">Registration</Link></li>
               <li><Link to="/committee" className="hover:text-secondary-400 transition-colors">Committee</Link></li>
             </ul>

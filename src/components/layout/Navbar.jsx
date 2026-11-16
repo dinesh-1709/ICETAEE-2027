@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ExternalLink } from 'lucide-react';
+import { CMT_SUBMISSION_URL } from '../../data/links';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +37,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -46,6 +47,14 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <a
+              href={CMT_SUBMISSION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-secondary-600 hover:bg-secondary-700 text-white text-xs lg:text-sm font-semibold rounded-lg shadow-sm hover:shadow transition-all transform hover:scale-105"
+            >
+              Submit Paper <ExternalLink size={14} />
+            </a>
           </nav>
 
           <button
@@ -63,7 +72,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-4 flex flex-col space-y-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-4 flex flex-col space-y-3">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -74,6 +83,15 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+          <a
+            href={CMT_SUBMISSION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-secondary-600 hover:bg-secondary-700 text-white text-center py-2.5 rounded-lg font-semibold flex items-center justify-center gap-2 shadow-sm transition-colors mt-2"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Submit Paper (CMT) <ExternalLink size={16} />
+          </a>
         </div>
       )}
     </header>

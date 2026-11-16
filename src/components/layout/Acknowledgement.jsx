@@ -1,4 +1,6 @@
 import React from 'react';
+import { ExternalLink } from 'lucide-react';
+import { CMT_SUBMISSION_URL } from '../../data/links';
 
 const Acknowledgement = () => {
   return (
@@ -8,9 +10,17 @@ const Acknowledgement = () => {
           Acknowledgement
         </h3>
         <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200/80">
-          <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+          <p className="text-slate-600 leading-relaxed text-sm sm:text-base mb-5">
             The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
           </p>
+          <a
+            href={CMT_SUBMISSION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-700 text-sm font-semibold rounded-lg border border-primary-200 transition-colors"
+          >
+            Microsoft CMT Submission Portal <ExternalLink size={16} />
+          </a>
         </div>
       </div>
     </section>

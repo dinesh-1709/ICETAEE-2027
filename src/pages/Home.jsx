@@ -1,6 +1,7 @@
 import React from 'react';
-import { Calendar, MapPin, ChevronRight, Zap, Shield, Cpu, RefreshCw } from 'lucide-react';
+import { Calendar, MapPin, ChevronRight, Zap, Shield, Cpu, RefreshCw, ExternalLink, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { CMT_SUBMISSION_URL } from '../data/links';
 
 const Hero = () => {
   return (
@@ -51,13 +52,50 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center md:justify-start">
+            <a
+              href={CMT_SUBMISSION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-secondary-600 hover:bg-secondary-700 text-white rounded-lg font-semibold flex items-center justify-center gap-2 transition-all transform hover:scale-105 shadow-lg shadow-secondary-600/30"
+            >
+              Submit Paper (CMT) <ExternalLink size={20} />
+            </a>
             <Link to="/registration" className="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-semibold flex items-center justify-center gap-2 transition-all transform hover:scale-105 shadow-lg shadow-primary-600/30">
               Register Now <ChevronRight size={20} />
             </Link>
             <Link to="/topics" className="px-8 py-4 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-lg font-semibold flex items-center justify-center transition-all shadow-sm">
               Call for Papers
             </Link>
+          </div>
+
+          {/* CMT Link Submit the Paper Callout */}
+          <div className="mt-8 p-4 sm:p-5 bg-white border border-primary-100 rounded-2xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
+            <div className="flex items-center gap-3.5">
+              <div className="w-11 h-11 rounded-xl bg-secondary-50 border border-secondary-200 text-secondary-600 flex items-center justify-center flex-shrink-0">
+                <FileText size={22} />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <p className="text-xs font-bold uppercase tracking-wider text-secondary-700">Online Submission</p>
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                  CMT Link to Submit the Paper
+                </h3>
+                <p className="text-xs text-slate-500">
+                  Submit manuscripts & track reviews through Microsoft CMT
+                </p>
+              </div>
+            </div>
+            <a
+              href={CMT_SUBMISSION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary-900 hover:bg-primary-800 text-white text-sm font-semibold rounded-xl shadow transition-all hover:scale-105 whitespace-nowrap"
+            >
+              CMT Submission Portal <ExternalLink size={16} />
+            </a>
           </div>
         </div>
 
